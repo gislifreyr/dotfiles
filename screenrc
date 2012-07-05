@@ -1,0 +1,9 @@
+termcapinfo * ti@:te@
+
+maptimeout 5
+altscreen on
+vbell off
+startup_message off
+autodetach on
+defscrollback 999
+hardstatus alwayslastline "%{=b yk} %H %{-b kw} %= %?%-Lw%?%{w} %{=b Rw} %t%> %{-b kw}%?%?%?%+Lw%?%?%> %= %{=b Mk} %c"

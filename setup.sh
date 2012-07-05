@@ -1,7 +1,7 @@
 #!/bin/bash
 #Author: gislifreyr
-#Inspiration: samueljon's vim-config-and-plugin-sync repo
-#Description: Sets up .vim, .vimrc, .bashrc, .screenrc, .irssi and .gitconfig and backups previous files if they exist.
+#Inspiration: samueljon's vim-config-and-plugin-sync repo on GitHub
+#Description: Sets up .vim/, .vimrc, .bashrc, .screenrc, .irssi/ and .gitconfig and backups previous files if they exist.
 
 ##################################
 
@@ -53,7 +53,7 @@ then
 	if [ -d ~/.setup ];
 	then
 		echo "~/.setup file already exists! Sort it out..."
-		break;
+		exit
 	else
 		clone_repo
 		echo "clone_repo()				[done]"
@@ -71,7 +71,7 @@ then
 
 	if [ -f ~/.bashrc ]
 	then
-		mv ~/.bashrc ~/.bashrc$DATE
+		mv ~/.bashrc ~/.bashrc.$DATE
 		create_bashrc
 		echo "create_bashrc()			[done]"
 	else
@@ -81,7 +81,7 @@ then
 
 	if [ -f ~/.screenrc ]
 	then
-		mv ~/.screenrc ~/.screenrc$DATE
+		mv ~/.screenrc ~/.screenrc.$DATE
 		create_screenrc
 		echo "create_screenrc()			[done]"
 	else
@@ -91,7 +91,7 @@ then
 
 	if [ -f ~/.gitconfig ]
 	then
-		mv ~/.gitconfig ~/.gitconfig$DATE
+		mv ~/.gitconfig ~/.gitconfig.$DATE
 		create_gitconfig
 		echo "create_gitconfig()		[done]"
 	else
@@ -118,9 +118,11 @@ then
 		mv ~/.irssi ~/.irssi.$DATE
 		create_irssidir
 		echo "create_irssidir() 		[done]"
+		echo "remember to edit config	......"
 	else
 		create_irssidir
 		echo "create_irssidir() 		[done]"
+		echo "remember to edit config	......"
 	fi
 
 	echo "###############################################################"
