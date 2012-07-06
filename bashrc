@@ -11,7 +11,7 @@ HISTCONTROL=ignoredups:ignorespace
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
+PROMPT_COMMAND='history -a'
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=9999
 HISTFILESIZE=999999
@@ -79,9 +79,9 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -Al --color=auto'
 alias l='ls -CF'
-alias ls='ls -al --color=auto'
+alias lh='ls -lh'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -97,3 +97,26 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export PS1='\[\033[1;34m\][\[\033[1;35m\]\u\[\033[1;36m\]@\[\033[1;35m\]\h \[\033[1;32m\]\W\[\033[1;34m\]]\[\033[1;32m\]% \[\033[00m\]'
+
+extract() {
+	if [ -f $1 ] ; then
+		case $1 in
+			*.tar.bz2)		tar xjf			;;
+			.bz2)			tar xjf $1		;;
+			*.tar.gz)		tar xzf $1		;;
+			*.bz2)			bunzip2 $1		;;
+			*.rar)			rar x $1		;;
+			*.gz)			gunzip $1		;;
+			*.tar)			tar xf $1		;;
+			*.tbz2)			tar xjf $1		;;
+			*.tgz)			tar xzf $1		;;
+			*.zip)			unzip $1		;;
+			*.Z)			uncompress $1	;;
+			*)			echo "'$1' cannot be extracted via extract()" ;;
+		esac
+	else
+		echo "'$1' is not a valid file"
+	fi
+}
+
+			 

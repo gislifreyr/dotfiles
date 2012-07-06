@@ -1,4 +1,8 @@
 set nocompatible
+
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 set history=1000
 set ruler
 set nobackup
