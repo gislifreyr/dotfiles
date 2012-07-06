@@ -35,7 +35,7 @@ function create_vimdir() {
 }
 
 function handle_submodules () {
-	cd ~/.setup/vim
+	cd ~/.setup
 	git submodule init
 	git submodule update
 }
@@ -94,9 +94,23 @@ then
 		mv ~/.gitconfig ~/.gitconfig.$DATE
 		create_gitconfig
 		echo "create_gitconfig()		[done]"
+		echo "remember to edit config	......"
 	else
 		create_gitconfig
 		echo "create_gitconfig() 		[done]"
+		echo "remember to edit config	......"
+	fi
+
+	if [ -d ~/.irssi ]
+	then
+		mv ~/.irssi ~/.irssi.$DATE
+		create_irssidir
+		echo "create_irssidir() 		[done]"
+		echo "remember to edit config	......"
+	else
+		create_irssidir
+		echo "create_irssidir() 		[done]"
+		echo "remember to edit config	......"
 	fi
 
 	if [ -d ~/.vim ]
@@ -111,18 +125,6 @@ then
 		echo "create_vimdir()			[done]"
 		handle_submodules
 		echo "handle_submodules()		[done]"
-	fi
-
-	if [ -d ~/.irssi ]
-	then
-		mv ~/.irssi ~/.irssi.$DATE
-		create_irssidir
-		echo "create_irssidir() 		[done]"
-		echo "remember to edit config	......"
-	else
-		create_irssidir
-		echo "create_irssidir() 		[done]"
-		echo "remember to edit config	......"
 	fi
 
 	echo "###############################################################"
