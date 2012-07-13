@@ -8,7 +8,7 @@
 DATE=`date +%d%m%y-%H:%M`
 
 function clone_repo() {
-	git clone https://gislifreyr@github.com/gislifreyr/dotfiles-scripts.git ~/.setup
+	git clone https://gislifreyr@github.com/gislifreyr/ready-steady-go.git ~/.setup
 }
 
 function create_vimrc() {
@@ -59,7 +59,7 @@ then
 		echo "clone_repo()				[done]"
 	fi
 
-	if [ -f ~/.vimrc ]
+	if [ -f ~/.vimrc ];
 	then
 		mv ~/.vimrc ~/.vimrc.$DATE
 		create_vimrc
@@ -69,7 +69,7 @@ then
 		echo "create_vimrc() 			[done]"
 	fi
 
-	if [ -f ~/.bashrc ]
+	if [ -f ~/.bashrc ];
 	then
 		mv ~/.bashrc ~/.bashrc.$DATE
 		create_bashrc
@@ -79,7 +79,7 @@ then
 		echo "create_bashrc()			[done]"
 	fi
 
-	if [ -f ~/.screenrc ]
+	if [ -f ~/.screenrc ];
 	then
 		mv ~/.screenrc ~/.screenrc.$DATE
 		create_screenrc
@@ -89,7 +89,7 @@ then
 		echo "create_screenrc()			[done]"
 	fi
 
-	if [ -f ~/.gitconfig ]
+	if [ -f ~/.gitconfig ];
 	then
 		mv ~/.gitconfig ~/.gitconfig.$DATE
 		create_gitconfig
@@ -101,7 +101,7 @@ then
 		echo "remember to edit config	......"
 	fi
 
-	if [ -d ~/.irssi ]
+	if [ -d ~/.irssi ];
 	then
 		mv ~/.irssi ~/.irssi.$DATE
 		create_irssidir
@@ -113,7 +113,7 @@ then
 		echo "remember to edit config	......"
 	fi
 
-	if [ -d ~/.vim ]
+	if [ -d ~/.vim ];
 	then
 		mv ~/.vim ~/.vim.$DATE
 		create_vimdir
