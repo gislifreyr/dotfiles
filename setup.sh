@@ -47,7 +47,7 @@ echo "###################################################################"
 
 read -sn 1 -p "Press y/Y to break your system..."
 
-if [ "$REPLY" = [yY] ];
+if [[ $REPLY = [yY] ]];
 
 then
 
@@ -56,8 +56,9 @@ then
 		echo "~/.setup file already exists! Sort it out..."
 		exit
 	else
+		echo -e "\nHere we go!"
 		clone_repo
-		echo "clone_repo()				[done]"
+		echo "clone_repo()			[done]"
 	fi
 
 	if [ -f ~/.vimrc ];
@@ -84,10 +85,10 @@ then
 	then
 		mv ~/.screenrc ~/.screenrc.$DATE
 		create_screenrc
-		echo "create_screenrc()			[done]"
+		echo "create_screenrc()		[done]"
 	else
 		create_screenrc
-		echo "create_screenrc()			[done]"
+		echo "create_screenrc()		[done]"
 	fi
 
 	if [ -f ~/.gitconfig ];
@@ -134,7 +135,7 @@ then
 
 else
 
-	echo "###############################################################"
+	echo -e "\n###############################################################"
 	echo "## Son, I am disappoint!                                     ##"
 	echo "## Y U NO TRUST ME?                                          ##"
 	echo "## Back in my day men were men and wrote their own scripts!  ##"
