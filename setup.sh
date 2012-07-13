@@ -29,6 +29,7 @@ function create_gitconfig() {
 
 function create_irssidir() {
 	ln -s ~/.setup/irssi ~/.irssi
+}
 
 function create_vimdir() {
 	ln -s ~/.setup/vim ~/.vim
@@ -46,7 +47,7 @@ echo "###################################################################"
 
 read -sn 1 -p "Press y/Y to break your system..."
 
-if [ "$REPLY" == "y" || "$REPLY" == "Y" ];
+if [ "$REPLY" = [yY] ];
 
 then
 
