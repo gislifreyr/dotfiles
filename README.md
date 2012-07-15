@@ -19,10 +19,6 @@ This is, as you can see, a repo of all my 'config-files' and my .vim-folder. set
 * [delimitMate][3] -- Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 * [NERDTree][4] -- A tree explorer plugin for vim.
 
-### TODO
-
-Make /old directory and move old files into it.
-
 [1]: https://github.com/samueljon/vim-config-and-plugin-sync
 [2]: https://github.com/tpope/vim-pathogen
 [3]: https://github.com/Raimondi/delimitMate
