@@ -1,14 +1,14 @@
-ready-steady-go
-========
+**ready-steady-go**
+===================
 
 WARNING! This has not been tested!
 
-About
------
+### About
 
-This is, as you can see, a repo of all my 'config-files' and my .vim-folder. setup.sh takes care of all the heavy lifting by cloning the repo and symlinking all the files and directories to their correct place in /home. The inspiration came from samueljon's repo called vim-config-and-plugin-sync [right here on GitHub][1].
+This is, as you can see, a repo of all my 'config-files' and my .vim-folder. The 'setup' script takes care of all the heavy lifting by cloning the repo, backing up existing config-files and folders and then symlinking all the new files and directories to their correct place in /home. The inspiration came from *samueljon's* repo called *vim-config-and-plugin-sync* [right here on GitHub][1].
 
 ### Installation
+
 	wget --no-check-certificate https://github.com/gislifreyr/ready-steady-go/raw/master/setup
 	chmod +x setup
 	./setup
