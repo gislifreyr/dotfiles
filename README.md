@@ -1,7 +1,6 @@
 **ready-steady-go**
 ===================
 
-WARNING! This has not been tested!
 
 ### About
 
