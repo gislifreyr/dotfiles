@@ -86,7 +86,6 @@ alias lh='ls -lh'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ...='cd ../../..'
 alias sqlite='sqlite3'
 
 # enable programmable completion features (you don't need to enable
