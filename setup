@@ -28,7 +28,8 @@ function create_gitconfig() {
 }
 
 function create_irssidir() {
-	ln -s ~/.setup/irssi ~/.irssi
+	#ln -s ~/.setup/irssi ~/.irssi #don't think there's a way to keep user and pass secret...
+	cp ~/.setup/irssi ~/.irssi
 }
 
 function create_vimdir() {

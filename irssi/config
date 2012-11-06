@@ -10,12 +10,13 @@ servers = (
 chatnets = {
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg nickserv identify username password;wait 3000";
+    autosendcmd = "/msg nickserv identify username password;wait 5000";
   };
 };
 
 channels = (
-  { name = "#nord"; chatnet = "freenode"; autojoin = "Yes"; autosendcmd = "/msg chanserv op #nord username"; }
+  { name = "#nord"; chatnet = "freenode"; autojoin = "Yes"; autosendcmd = "/msg chanserv op #nord username"; },
+  { name = "##linux.is"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {

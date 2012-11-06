@@ -14,6 +14,7 @@ set number
 set incsearch
 
 set hlsearch
+colorscheme elflord
 set noswapfile
 set nowb
 set autoindent
