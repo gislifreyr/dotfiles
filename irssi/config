@@ -15,8 +15,6 @@ chatnets = {
 };
 
 channels = (
-  { name = "#nord"; chatnet = "freenode"; autojoin = "Yes"; autosendcmd = "/msg chanserv op #nord username"; },
-  { name = "##linux.is"; chatnet = "freenode"; autojoin = "Yes"; }
 );
 
 aliases = {
