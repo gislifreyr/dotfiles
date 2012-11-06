@@ -8,7 +8,7 @@
 DATE=`date +%d%m%y-%H:%M`
 
 function clone_repo() {
-	git clone https://gislifreyr@github.com/gislifreyr/ready-steady-go.git ~/.setup
+	git clone git@github.com:gislifreyr/ready-steady-go.git ~/.setup
 }
 
 function create_vimrc() {
