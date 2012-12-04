@@ -95,6 +95,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+#execute ssh-agent at login
+exec /usr/bin/ssh-agent $SHELL
+
 export PS1='\[\033[1;34m\][\[\033[1;35m\]\u\[\033[1;36m\]@\[\033[1;35m\]\h \[\033[1;32m\]\W\[\033[1;34m\]]\[\033[1;32m\]% \[\033[00m\]'
 
 extract() {
