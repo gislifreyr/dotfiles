@@ -118,4 +118,7 @@ extract() {
 	fi
 }
 
-			 
+mkcd() {
+	mkdir -p "$@"
+	cd "$@"
+}		 
