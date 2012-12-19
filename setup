@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #Author: gislifreyr
 #Inspiration: samueljon's vim-config-and-plugin-sync repo on GitHub
 #Description: Sets up .vim/, .vimrc, .bashrc, .screenrc, .irssi/ and .gitconfig and backups previous files if they exist.
@@ -21,6 +22,10 @@ function create_bashrc() {
 
 function create_screenrc() {
 	ln -s ~/.setup/screenrc ~/.screenrc
+}
+
+function create_tmuxconf() {
+	ln -s ~/.setup/tmux.conf ~/.tmux.conf
 }
 
 function create_gitconfig() {
@@ -91,6 +96,16 @@ then
 	else
 		create_screenrc
 		echo "create_screenrc()		[done]"
+	fi
+
+	if [ -f ~/.tmux.conf ];
+	then
+		mv ~/.tmux.conf ~/.backup-files/tmuxconf.$DATE
+		create_tmuxconf
+		echo "create_tmuxconf()		[done]"
+	else
+		create_tmuxconf
+		echo "create_tmuxconf()		[done]"
 	fi
 
 	if [ -f ~/.gitconfig ];
