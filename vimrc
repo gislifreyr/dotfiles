@@ -3,6 +3,7 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set t_Co=256
 set history=1000
 set ruler
 set nobackup
@@ -49,11 +50,4 @@ set laststatus=2
 
 if match($TERM, "screen")!=-1
 	set term=xterm
-endif
-
-if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
-else
-  set nohlsearch
 endif
