@@ -25,7 +25,6 @@ set mousehide
 set scrolloff=8
 set selectmode=mouse
 syntax on
-set mouse=a
 "Status line
 
 "setup
