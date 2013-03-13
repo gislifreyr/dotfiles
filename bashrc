@@ -15,6 +15,7 @@ PROMPT_COMMAND='history -a'
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=9999
 HISTFILESIZE=999999
+HISTTIMEFORMAT="[%F %T] "
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
