@@ -63,6 +63,9 @@ vnoremap <tab> %
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
 
+" Toggle between paste and nopaste
+nmap <leader>p :set paste!<CR>
+
 " NERDTree config
 nnoremap <leader>n :NERDTreeToggle<cr>
 let NERDChristmasTree = 1
