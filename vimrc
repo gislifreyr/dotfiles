@@ -36,6 +36,7 @@ set wildmode=list:longest
 " set relativenumber
 " set undofile
 """""""""""""""""""""""
+set cursorline
 
 syntax on
 

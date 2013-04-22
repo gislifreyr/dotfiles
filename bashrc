@@ -122,4 +122,10 @@ extract() {
 mkcd() {
 	mkdir -p "$@"
 	cd "$@"
-}		 
+}
+
+hist() {
+	HISTORYCMD="history $@"
+	HISTORYCMD="${HISTORYCMD% }"
+	eval "${HISTORYCMD// / | grep -i }"
+}
