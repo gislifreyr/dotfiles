@@ -89,12 +89,20 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias sqlite='sqlite3'
 
+#tmux aliases
+alias tmuxnew='tmux new-session -s'
+alias tmuxatt='tmux attach -t'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+#vim uber alles
+export VISUAL=vim
+export EDITOR=vim
 
 export PS1='\[\033[1;34m\][\[\033[1;35m\]\u\[\033[1;36m\]@\[\033[1;35m\]\h \[\033[1;32m\]\W\[\033[1;34m\]]\[\033[1;32m\]% \[\033[00m\]'
 
