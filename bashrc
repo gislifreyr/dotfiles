@@ -5,6 +5,11 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ]; then
+	PATH=~/bin:"${PATH}"
+fi
+
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
 HISTCONTROL=ignoredups:ignorespace
@@ -90,8 +95,8 @@ alias ....='cd ../../..'
 alias sqlite='sqlite3'
 
 #tmux aliases
-alias tmuxnew='tmux new-session -s'
-alias tmuxatt='tmux attach -t'
+alias tmuxn='tmux new-session -s'
+alias tmuxa='tmux attach -t'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
