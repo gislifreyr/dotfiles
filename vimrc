@@ -18,7 +18,7 @@ set shiftwidth=4
 set textwidth=0
 
 set showcmd
-set showmode
+set noshowmode
 set number
 colorscheme elflord
 set noswapfile
