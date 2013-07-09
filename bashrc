@@ -99,6 +99,8 @@ alias tmux='TERM=screen-256color-bce tmux'
 #tmux aliases
 alias tmuxn='tmux new-session -s'
 alias tmuxa='tmux attach -t'
+#fix scroll issue in irssi
+alias irssi='TERM=screen-256color irssi'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
