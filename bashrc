@@ -106,8 +106,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 #vim uber alles
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
 
 export PS1='\[\033[1;31m\][\[\033[1;36m\]\u\[\033[1;33m\]@\[\033[1;36m\]\h \[\033[1;33m\]\W\[\033[1;31m\]]\[\033[1;33m\]% \[\033[00m\]'
 
