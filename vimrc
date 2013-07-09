@@ -53,6 +53,11 @@ set incsearch
 set hlsearch
 set showmatch
 set gdefault
+" moving between splits
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
 " Space to clear search highlighting
 nnoremap <leader><space> :noh<cr>
 " Match bracket pairs (normal)
@@ -73,27 +78,15 @@ let NERDChristmasTree = 1
 let NERDTreeHighlightCursorline = 1
 let NERDTreeMapActivateNode='<CR>'
 
-"Status line
-
-"setup
-set statusline=%f						" Tail of filename
-
-"display a warning if not utf-encoding
-set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
-set statusline+=%*
-
-set statusline+=%h						" Help file flag
-set statusline+=%y						" Filetype
-set statusline+=%r						" Read-only flag
-set statusline+=%m						" Modified flag
-
-set statusline+=%=						" Left/right separator
-set statusline+=[asc=\%03.3b]
-set statusline+=\ [hex=\%02.2B]
-set statusline+=\ [%c,					" Cursor column
-set statusline+=%l/%L					" Cursor line/total lines
-set statusline+=\ %P]					" Percent through file
+" vim-airline config
 set laststatus=2
+let g:airline_theme='light'
+let g:airline_powerline_fonts=0
+let g:airline_left_sep='»'
+let g:airline_right_sep='«'
+" fix to get out of insert mode immedieatly
+set ttimeout
+set ttimeoutlen=50
 
 if match($TERM, "screen")!=-1
 	set term=xterm
