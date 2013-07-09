@@ -8,9 +8,9 @@
 	ignore = dirty
 [submodule "vim/bundle/vim-airline"]
 	path = vim/bundle/vim-airline
-	url = git@github.com:bling/vim-airline.git
+	url = http://github.com/bling/vim-airline.git
 	ignore = dirty
 [submodule "vim/bundle/vim-bufferline"]
 	path = vim/bundle/vim-bufferline
-	url = git@github.com:bling/vim-bufferline.git
+	url = http://github.com/bling/vim-bufferline.git
 	ignore = dirty
