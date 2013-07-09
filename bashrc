@@ -94,6 +94,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias sqlite='sqlite3'
 
+#tmux color 256
+alias tmux='TERM=screen-256color-bce tmux'
 #tmux aliases
 alias tmuxn='tmux new-session -s'
 alias tmuxa='tmux attach -t'
