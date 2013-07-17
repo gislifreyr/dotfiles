@@ -80,7 +80,7 @@ let NERDTreeMapActivateNode='<CR>'
 
 " vim-airline config
 set laststatus=2
-let g:airline_theme='light'
+let g:airline_theme='dark'
 let g:airline_powerline_fonts=0
 let g:airline_left_sep='»'
 let g:airline_right_sep='«'
