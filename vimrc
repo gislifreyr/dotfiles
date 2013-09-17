@@ -52,7 +52,6 @@ set smartcase
 set incsearch
 set hlsearch
 set showmatch
-set gdefault
 " moving between splits
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
