@@ -98,9 +98,16 @@ alias sqlite='sqlite3'
 alias tmux='TERM=screen-256color-bce tmux'
 #tmux aliases
 alias tmuxn='tmux new-session -s'
-alias tmuxa='tmux attach -t'
+alias tmuxa='tmux attach -d -t'
 #fix scroll issue in irssi
 alias irssi='TERM=screen-256color irssi'
+
+#vim muscle memory
+alias :Q='exit'
+alias :q='exit'
+alias :WQ='exit'
+alias :Wq='exit'
+alias :wq='exit'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
