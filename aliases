@@ -1,0 +1,31 @@
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
+# ls aliases
+alias ll='ls -alF'
+alias la='ls -Al'
+alias l='ls -CF'
+alias lh='ls -lh'
+
+# for easy switching between folders
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# I need this somewhere...
+alias sqlite='sqlite3'
+
+# tmux aliases
+alias tmux='TERM=screen-256color-bce tmux'
+alias tmuxn='tmux new-session -s'
+alias tmuxa='tmux attach -d -t'
+#fix scroll issue in irssi
+alias irssi='TERM=screen-256color irssi'
+
+# http traffic - from mathiasbynens dotfiles
+alias sniff="sudo ngrep -d '$@' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i "$@" -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
