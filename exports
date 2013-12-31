@@ -1,0 +1,15 @@
+#vim uber alles
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
+
+# will this work?
+export term=xterm-256color
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"

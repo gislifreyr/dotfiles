@@ -5,6 +5,7 @@ alias egrep='egrep --color=auto'
 
 
 # ls aliases
+alias ls='ls --color=auto'
 alias ll='ls -alF'
 alias la='ls -Al'
 alias l='ls -CF'
@@ -23,6 +24,13 @@ alias sqlite='sqlite3'
 alias g='git'
 alias v='vim'
 alias j='jobs'
+
+# vim muscle memory
+alias :Q='exit'
+alias :q='exit'
+alias :WQ='exit'
+alias :Wq='exit'
+alias :wq='exit'
 
 # Stopwatch
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
