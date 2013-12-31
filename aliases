@@ -15,9 +15,20 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+alias --='cd -'
 
 # I need this somewhere...
 alias sqlite='sqlite3'
+# some randoms
+alias g='git'
+alias v='vim'
+alias j='jobs'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# myip
+alias icanhazip='curl icanhazip.com'
 
 # tmux aliases
 alias tmux='TERM=screen-256color-bce tmux'
