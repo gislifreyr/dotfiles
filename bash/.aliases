@@ -21,7 +21,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-alias --='cd -'
 
 # I need this somewhere...
 alias sqlite='sqlite3'

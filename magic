@@ -30,6 +30,8 @@ vim_bundling() {
 	#pwd
 	#echo "cloneum Vundle"
 	git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
+	#install all the plugins
+	echo "installing vim-plugins..."
 	vim +PluginInstall +qall
 }
 
@@ -74,13 +76,10 @@ stow_link() {
 	$stow_path vim
 }
 
-
 read -sn 1 -p "Shirley you can't be serious? Press y/Y if you are..."
 
 if [[ $REPLY = [yY] ]];
-
 then
-
 	clone_repo
 	vim_bundling
 	back_it_up
@@ -89,10 +88,8 @@ then
 	echo -e "\n\n+++++++++++++++++++"
 	echo "Dis_gon_be_good.gif"
 	echo -e "+++++++++++++++++++\n"
-
 else
 	echo "++++++++++++++++++++++"
 	echo "Such disappointment..."
 	echo -e "++++++++++++++++++++++\n"
-
 fi
