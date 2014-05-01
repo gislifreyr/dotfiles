@@ -44,7 +44,7 @@ set textwidth=0
 set showcmd
 set noshowmode
 set number
-colorscheme elflord
+colorscheme vividchalk
 set noswapfile
 set nowb
 set autoindent

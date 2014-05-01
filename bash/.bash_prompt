@@ -1,13 +1,5 @@
-green="\e[38;5;46m"
-red="\e[38;5;196m"
-whitish="\e[38;5;225m"
-purple="\e[38;5;129m"
-none="\e[0m"
-tick="\xe2\x9c\x94"
-arrow="\xe2\x9e\x9c"
-
 __exit_color(){
-	[[ "$1" -eq 0 || "$1" -eq 130 ]] && printf -- "$green" || printf -- "$red"
+    [[ "$1" -eq 0 || "$1" -eq 130 ]] && printf -- "\\e[38;5;46m" || printf -- "\\e[38;5;196m"
 }
 
-PS1='\[$(__exit_color $?)\]$tick ${whitish}\W ${purple}$arrow ${none}'
+PS1=$'$(__exit_color $?)\xe2\x9c\x94 \\e[38;5;225m\W \\e[38;5;129m\xe2\x9e\x9c\\[\e[0m\\] '
