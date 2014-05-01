@@ -5,6 +5,10 @@ export EDITOR="/usr/bin/vim"
 # will this work?
 #export term=xterm-256color
 
+#prefer US English and use UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 #export PROMPT_COMMAND='history -a'
 # don't log duplicates or lines beginning with a space
 export HISTCONTROL=ignoredups:ignorespace

@@ -1,3 +1,13 @@
-source ~/dotfiles/extras/colors
-FANCY="\342\226\270"   # my fancy unicode prompt
-export PS1="\[$Cyan\]\h: \[$Red\]\W \[$Yellow\]$FANCY \[$Color_Off\] "
+green="\e[38;5;46m"
+red="\e[38;5;196m"
+whitish="\e[38;5;225m"
+purple="\e[38;5;129m"
+none="\e[0m"
+tick="\xe2\x9c\x94"
+arrow="\xe2\x9e\x9c"
+
+__exit_color(){
+	[[ "$1" -eq 0 || "$1" -eq 130 ]] && printf -- "$green" || printf -- "$red"
+}
+
+PS1='\[$(__exit_color $?)\]$tick ${whitish}\W ${purple}$arrow ${none}'
