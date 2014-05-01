@@ -1,0 +1,68 @@
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+    colourflag="--color"
+else # OS X `ls`
+	colourflag="-G"
+fi
+
+# ls aliases
+alias ls='ls ${colorflag}'
+alias ll='ls -lF ${colorflag}'
+alias la='ls -AlF ${colorflag}'
+alias l='ls -CF ${colorflag}'
+alias lh='ls -lh ${colorflag}'
+
+# for easy switching between folders
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias --='cd -'
+
+# I need this somewhere...
+alias sqlite='sqlite3'
+# some randoms
+alias g='git'
+alias v='vim'
+alias j='jobs'
+alias h='history|less'
+
+# vim muscle memory
+alias :Q='exit'
+alias :q='exit'
+alias :WQ='exit'
+alias :Wq='exit'
+alias :wq='exit'
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# myip
+alias icanhazip='curl icanhazip.com'
+
+# tmux aliases
+alias tmux='TERM=screen-256color-bce tmux'
+alias tmuxn='tmux new-session -s'
+alias tmuxa='tmux attach -d -t'
+#fix scroll issue in irssi
+#alias irssi='TERM=screen-256color irssi'
+
+# monitor http traffic
+alias sniff="sudo ngrep -d '$@' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i "$@" -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# get rid of those bloddy .DS_Store files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# urlencode strings
+alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+
+# ring terminal bell
+alias bell='tput bel'
+
+# lock the screen
+alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

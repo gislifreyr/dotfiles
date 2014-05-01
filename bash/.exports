@@ -1,0 +1,29 @@
+#vim uber alles
+export VISUAL="/usr/bin/vim"
+export EDITOR="/usr/bin/vim"
+
+# will this work?
+#export term=xterm-256color
+
+#prefer US English and use UTF-8
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+#export PROMPT_COMMAND='history -a'
+# don't log duplicates or lines beginning with a space
+export HISTCONTROL=ignoredups:ignorespace
+# have it big enough
+export HISTSIZE=999999
+export HISTFILESIZE=999999
+# ignore some commands and set a format
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
+export HISTTIMEFORMAT="[%F %T] "
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto"
