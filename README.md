@@ -4,21 +4,27 @@
 
 ### About
 
-This is, as you can see, a repo of all my 'config-files' and my .vim-folder. The 'setup' script takes care of all the heavy lifting by cloning the repo, backing up existing config-files and folders and then symlinking all the new files and directories to their correct place in /home. The inspiration came from *samueljon's* repo called *vim-config-and-plugin-sync* [right here on GitHub][1].
+This is, as you can see, a repo of all my 'dotfiles'. The 'magic' script takes care of all the magic with a little help from git and stow.
+Inspired by *samueljon's*  [vim-config-and-plugin-sync][1], *mathiasbynens* [dotfiles][2] and many more that I can't think of.
 
 ### Installation
 
-	wget --no-check-certificate https://github.com/gislifreyr/ready-steady-go/raw/master/setup
-	chmod +x setup
-	./setup
+	wget --no-check-certificate https://github.com/gislifreyr/dotfiles/raw/master/magic
+	chmod +x magic
+	./magic
 
 ### Vim-plugins
 
-* [pathogen][2] -- pathogen.vim: manage your runtimepath
-* [delimitMate][3] -- Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
-* [NERDTree][4] -- A tree explorer plugin for vim.
+* [Vundle.vim][3] -- "Vundle, the plug-in manager for Vim"
+* [delimitMate][4] -- "Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc."
+* [vim-airline][5] -- "Lean & mean status/tabline for vim that's light as air."
+* [vim-bufferline][6] -- "Super simple vim plugin to show the list of buffers in the command bar."
+* [vim-fugitive][7] -- "fugitive.vim: a Git wrapper so awesome, it should be illegal"
 
 [1]: https://github.com/samueljon/vim-config-and-plugin-sync
-[2]: https://github.com/tpope/vim-pathogen
-[3]: https://github.com/Raimondi/delimitMate
-[4]: https://github.com/scrooloose/nerdtree
+[2]: https://github.com/mathiasbynens/dotfiles
+[3]: https://github.com/gmarik/Vundle.vim
+[4]: https://github.com/Raimondi/delimitMate
+[5]: https://github.com/bling/vim-airline
+[6]: https://github.com/bling/vim-bufferline
+[7]: https://github.com/tpope/vim-fugitive
