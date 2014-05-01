@@ -9,7 +9,7 @@ Inspired by *samueljon's*  [vim-config-and-plugin-sync][1], *mathiasbynens* [dot
 
 ### Installation
 
-	wget --no-check-certificate https://github.com/gislifreyr/dotfiles/raw/master/magic
+	wget --no-check-certificate https://raw.githubusercontent.com/gislifreyr/dotfiles/master/magic
 	chmod +x magic
 	./magic
 
