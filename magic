@@ -17,7 +17,7 @@ clone_repo() {
 	mkdir -p $inst_path && cd $inst_path
 	#pwd
 	#echo "cloneum repoid"
-	git clone https://github.com/gislifrey/dotfiles.git
+	git clone https://github.com/gislifreyr/dotfiles.git
 }
 
 # clonea vundle repoid function
