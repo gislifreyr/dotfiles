@@ -8,7 +8,7 @@ which git &> /dev/null|| ( echo "Install git you git" && exit 1 )
 stow_path=$(which stow) || ( echo "Install stow ya filthy animal!" && exit 1 )
 
 # clonea repoid function
-inst_path=$HOME/devel
+inst_path=$HOME
 clone_repo() {
 	echo -e "\n\n================================"
 	echo "= Cloning the dotfiles repo... ="
@@ -70,7 +70,6 @@ stow_link() {
 	#pwd
 	$stow_path apps
 	$stow_path bash
-	$stow_path extras
 	$stow_path git
 	$stow_path vim
 }
