@@ -10,11 +10,11 @@ else # OS X `ls`
 fi
 
 # ls aliases
-alias ls='ls ${colorflag}'
-alias ll='ls -lF ${colorflag}'
-alias la='ls -AlF ${colorflag}'
-alias l='ls -CF ${colorflag}'
-alias lh='ls -lh ${colorflag}'
+alias ls='ls ${colourflag}'
+alias ll='ls -lF ${colourflag}'
+alias la='ls -AlF ${colourflag}'
+alias l='ls -CF ${colourflag}'
+alias lh='ls -lh ${colourflag}'
 
 # for easy switching between folders
 alias ..='cd ..'
@@ -65,3 +65,6 @@ alias bell='tput bel'
 
 # lock the screen
 alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+#pretty-print json output
+alias pretty='python -mjson.tool'

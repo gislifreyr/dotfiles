@@ -10,6 +10,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 #export PROMPT_COMMAND='history -a'
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 # don't log duplicates or lines beginning with a space
 export HISTCONTROL=ignoredups:ignorespace
 # have it big enough
