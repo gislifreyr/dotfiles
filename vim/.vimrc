@@ -119,3 +119,7 @@ set ttimeoutlen=50
 if match($TERM, "screen")!=-1
 	set term=xterm
 endif
+
+" red background for letters after 80 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
