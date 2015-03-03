@@ -95,6 +95,9 @@ set listchars=tab:▸\ ,eol:¬
 " Toggle between paste and nopaste
 nmap <leader>p :set paste!<CR>
 
+" sudo-save
+cmap w!! w !sudo tee > /dev/null %
+
 " gf is built in and will "start editing the file whose name is under the cursor
 " gb is not built in and will "Go back to the file which you came from
 nnoremap gb <C-o>
