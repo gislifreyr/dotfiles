@@ -37,6 +37,7 @@ set ruler
 set nobackup
 set encoding=utf-8
 " Tab
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set textwidth=0

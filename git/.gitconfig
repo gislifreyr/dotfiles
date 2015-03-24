@@ -3,3 +3,7 @@
 	email = gislifb@gmail.com
 [credential]
 	helper = cache --timeout=3600
+[alias]
+    ca = commit -a
+    co = checkout
+    cob = checkout -b

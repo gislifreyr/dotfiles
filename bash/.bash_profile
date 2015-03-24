@@ -26,3 +26,7 @@ shopt -s checkwinsize
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
