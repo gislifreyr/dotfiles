@@ -8,3 +8,5 @@
     ca = commit -a
     co = checkout
     cob = checkout -b
+    st = status
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
