@@ -3,6 +3,6 @@ __exit_color(){
     ##[[ "$1" -eq 0 || "$1" -eq 130 ]] && printf -- "$(tput setaf 46)" || printf -- "$(tput setaf 196)"
 }
 
-PS1='\[$(__exit_color $?)\]✔ \[\e[38;5;225m\]\W \[\e[38;5;129m\]➜ \[\e[0m\]'
+PS1='\[$(__exit_color $?)\]✔ \[\e[38;5;225m\][\h] \[\e[38;5;225m\]\W \[\e[38;5;129m\]➜ \[\e[0m\]'
 ##PS1=$'$(__exit_color $?)\xe2\x9c\x94 $(tput setaf 225)\W $(tput setaf 129)\xe2\x9e\x9c \[$(tput sgr0)\]'
 #PS1="\[\e[38;5;225m\]\W \[\e[38;5;129m\]➜ \[\e[0m\]"

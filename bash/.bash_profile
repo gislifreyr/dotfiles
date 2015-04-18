@@ -25,8 +25,16 @@ shopt -s checkwinsize
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-[ -f /etc/bash_completion ] && source /etc/bash_completion
+#[ -f /etc/bash_completion ] && source /etc/bash_completion
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+if [ "$(uname -s)" == "Linux" ]; then
+    if [ -f /etc/profile.d/bash_completion ]; then
+        . /etc/profile.d./bash_completion
+    fi
+fi
+
+if [ "$(uname)" == "Darwin" ]; then
+    if [ -f $(brew --prefix)/etc/bash_completion ]; then
+        . $(brew --prefix)/etc/bash_completion
+    fi
 fi
