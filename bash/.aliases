@@ -44,7 +44,6 @@ alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date
 alias icanhazip='curl icanhazip.com'
 
 # tmux aliases
-alias tmux='TERM=screen-256color-bce tmux'
 alias tmuxn='tmux new-session -s'
 alias tmuxa='tmux attach -d -t'
 #fix scroll issue in irssi
