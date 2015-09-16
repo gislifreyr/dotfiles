@@ -33,3 +33,7 @@ hist() {
 digg() {
 	dig +nocmd "$1" any +multiline +noall +answer
 }
+
+isitup() {
+    ping -q -n -c25 -i0.1 $1 | awk -v host=$1 '/packet loss/{loss=$7} /round-trip/{trip=$4$5} END{print host,"--->",loss,"-",trip}'
+}
