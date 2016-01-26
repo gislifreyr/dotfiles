@@ -38,4 +38,5 @@ if [ "$(uname)" == "Darwin" ]; then
         . $(brew --prefix)/etc/bash_completion
     fi
 fi
-eval "$(rbenv init -)"
+
+which rbenv &>/dev/null && eval "$(rbenv init -)"
