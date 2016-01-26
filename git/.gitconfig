@@ -1,6 +1,6 @@
 [user]
 	name = Gísli Freyr Brynjarsson
-	email = gislifb@gmail.com
+	email = "(none)"
 [credential]
 	helper = cache --timeout=3600
 [alias]
@@ -10,3 +10,7 @@
     cob = checkout -b
     st = status
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[color]
+	ui = auto
+[push]
+	default = current

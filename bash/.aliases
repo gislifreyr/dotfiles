@@ -67,3 +67,6 @@ alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resou
 
 #pretty-print json output
 alias pretty='python -mjson.tool'
+
+#for rtv
+alias rtv="BROWSER=rtv_browser rtv"
