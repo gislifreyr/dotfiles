@@ -11,7 +11,7 @@ gifs="mpv --loop=inf --autofit="50%""
 function pic_handle {
     cd ~/tmp
     name=${url##*/}
-    curl -s -O "$url"
+    curl -s -O -L "$url"
     qlmanage -p ~/tmp/$name &>/dev/null
     rm ~/tmp/$name
 }

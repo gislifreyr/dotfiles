@@ -16,6 +16,8 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rodjek/vim-puppet'
+Plugin 'godlygeek/tabular'
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,3 +130,6 @@ endif
 " red background for letters after 80 chars
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" gruvbox specific
+let g:gruvbox_italic=0
