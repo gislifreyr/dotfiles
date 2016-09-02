@@ -85,6 +85,9 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+" saner splits
+set splitbelow
+set splitright
 " Space to clear search highlighting
 nnoremap <leader><space> :noh<cr>
 " Match bracket pairs (normal)
