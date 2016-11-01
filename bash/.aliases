@@ -70,3 +70,6 @@ alias pretty='python -mjson.tool'
 
 #for rtv
 alias rtv="BROWSER=rtv_browser rtv"
+
+#docker start
+alias startdocker="docker-machine env docker-01"
