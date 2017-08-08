@@ -37,3 +37,20 @@ digg() {
 isitup() {
     ping -q -n -c25 -i0.1 $1 | awk -v host=$1 '/packet loss/{loss=$7} /round-trip/{trip=$4$5} END{print host,"--->",loss,"-",trip}'
 }
+
+docker-start() {
+    machine_name=${1:-default}
+    machine_status=$(docker-machine status $machine_name || echo "DoesNotExist")
+
+    if [ "DoesNotExist" == $machine_status ]
+    then
+        return 1
+    elif [ "Stopped" == $machine_status ]
+    then
+        docker-machine start $machine_name
+    else
+        echo "$machine_name --> $machine_status"
+    fi
+
+    eval $(docker-machine env $machine_name)
+}
