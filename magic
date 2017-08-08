@@ -20,17 +20,13 @@ clone_repo() {
 	git clone https://github.com/gislifreyr/dotfiles.git
 }
 
-# clonea vundle repoid function
 vim_bundling() {
 	echo -e "\n\n============================================"
-	echo "= Cloning Vundle and installing plugins... ="
+	echo "= Cloning Plug and installing plugins... ="
 	echo "============================================"
-	#echo "inst_path = $inst_path"
 	cd $inst_path/dotfiles/vim
-	#pwd
-	#echo "cloneum Vundle"
-	git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
-	#install all the plugins
+    curl -fLo .vim/autoload/plug.vim --create-dirs \
+            https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	echo "installing vim-plugins..."
 	vim +PluginInstall +qall
 }
@@ -44,7 +40,7 @@ back_it_up() {
 	#echo "Lets create $HOME/backup-files"
 	mkdir -p $HOME/backup-files
 
-	for i in .irssi .screenrc .tmux.conf .aliases .bash_profile .bash_prompt .bashrc .exports .functions .gitconfig .vim .vimrc
+	for i in .irssi .screenrc .tmux.conf .aliases .bash_profile .bash_prompt .bashrc .inputrc .exports .functions .gitconfig .vim .vimrc
 	do
 		if [[ -e $i ]]; then
 			if [[ -L $i ]]; then

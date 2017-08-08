@@ -1,36 +1,23 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " let's install some plugins
-Plugin 'Raimondi/delimitMate'
-Plugin 'bling/vim-airline'
-Plugin 'bling/vim-bufferline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rodjek/vim-puppet'
-Plugin 'godlygeek/tabular'
-Plugin 'morhetz/gruvbox'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
+Plug 'Raimondi/delimitMate'
+Plug 'bling/vim-airline'
+Plug 'bling/vim-bufferline'
+Plug 'tpope/vim-fugitive'
+Plug 'rodjek/vim-puppet', {'for': 'puppet'}
+Plug 'godlygeek/tabular'
+Plug 'morhetz/gruvbox'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+" Initialize plugin system
+call plug#end()
 
+" config
 set modelines=0
 
 set hidden
@@ -109,11 +96,15 @@ cmap w!! w !sudo tee > /dev/null %
 " gb is not built in and will "Go back to the file which you came from
 nnoremap gb <C-o>
 
-" NERDTree config
-nnoremap <leader>n :NERDTreeToggle<cr>
-let NERDChristmasTree = 1
-let NERDTreeHighlightCursorline = 1
-let NERDTreeMapActivateNode='<CR>'
+" vimux mappings
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+" Inspect runner pane
+map <Leader>vi :VimuxInspectRunner<CR>
+" Zoom the tmux runner pane
+map <Leader>vz :VimuxZoomRunner<CR>
 
 " vim-airline config
 set laststatus=2
