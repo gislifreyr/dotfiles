@@ -1,4 +1,5 @@
 set nocompatible
+set backspace=indent,eol,start
 filetype off
 
 call plug#begin('~/.vim/plugged')
@@ -26,16 +27,20 @@ set history=1000
 set ruler
 set nobackup
 set encoding=utf-8
+
 " Tab
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set textwidth=0
+" tab-settings for specific filetypes
+autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2
+autocmd FileType puppet setlocal tabstop=2 shiftwidth=2
 
 set showcmd
 set noshowmode
-set number
-colorscheme vividchalk
+colorscheme gruvbox
 set noswapfile
 set nowb
 set autoindent
@@ -46,9 +51,16 @@ set selectmode=mouse
 set wildmenu
 set wildmode=list:longest
 
+" linenumbers
+set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
+
 """""""""""""""""""""""
-" vim 7.3 only...
-" set relativenumber
 " set undofile
 """""""""""""""""""""""
 set cursorline
@@ -117,9 +129,9 @@ let g:airline_right_sep='«'
 set ttimeout
 set ttimeoutlen=50
 
-if match($TERM, "screen")!=-1
-	set term=xterm
-endif
+"if match($TERM, "screen")!=-1
+"	set term=xterm
+"endif
 
 " red background for letters after 80 chars
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
