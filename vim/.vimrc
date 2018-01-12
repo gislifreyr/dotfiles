@@ -27,6 +27,8 @@ set history=1000
 set ruler
 set nobackup
 set encoding=utf-8
+set background=dark
+set termguicolors
 
 " Tab
 set expandtab

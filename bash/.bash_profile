@@ -39,8 +39,5 @@ if [ "$(uname)" == "Darwin" ]; then
     fi
 fi
 
-# have gruvbox show correct colors in terminal vim
-source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
-
 which rbenv &>/dev/null && eval "$(rbenv init -)"
 #which pyenv-virtualenv-init &> /dev/null && eval "$(pyenv virtualenv-init -)"
