@@ -15,3 +15,5 @@
 	ui = auto
 [push]
 	default = current
+[core]
+	editor = /usr/local/bin/vim
