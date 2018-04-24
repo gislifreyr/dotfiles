@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'rodjek/vim-puppet', {'for': 'puppet'}
 Plug 'godlygeek/tabular'
 Plug 'morhetz/gruvbox'
+Plug 'w0rp/ale', {'for': 'python'}
 
 " Initialize plugin system
 call plug#end()
@@ -37,6 +38,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set textwidth=0
 " tab-settings for specific filetypes
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
@@ -144,3 +146,7 @@ match OverLength /\%81v.\+/
 
 " gruvbox specific
 let g:gruvbox_italic=0
+
+" config for ALE syntax checker
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8']}
