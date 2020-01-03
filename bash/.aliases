@@ -62,11 +62,6 @@ alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.ar
 # ring terminal bell
 alias bell='tput bel'
 
-# lock the screen
-alias lockit="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
 #pretty-print json output
 alias pretty='python -mjson.tool'
 
-#for rtv
-alias rtv="BROWSER=rtv_browser rtv"

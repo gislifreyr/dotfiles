@@ -15,6 +15,7 @@ Plug 'rodjek/vim-puppet', {'for': 'puppet'}
 Plug 'godlygeek/tabular'
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale', {'for': 'python'}
+Plug 'fatih/vim-go', {'for': 'go', 'do': ':GoUpdateBinaries'}
 
 " Initialize plugin system
 call plug#end()

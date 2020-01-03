@@ -54,3 +54,6 @@ docker-start() {
 
     eval $(docker-machine env $machine_name)
 }
+
+#run dev webserver from directory on local port $1 (8000 default)
+serv() { docker run --rm --name "nginx-${1:-8000}" -p "${1:-8000}:80" "${@:2}" -v $PWD:/usr/share/nginx/html:ro caub/nginx-dev; }

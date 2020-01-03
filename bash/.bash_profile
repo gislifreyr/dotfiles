@@ -1,5 +1,5 @@
 # set PATH so it includes user's private bin if it exists
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 #Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
