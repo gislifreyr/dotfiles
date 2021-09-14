@@ -41,3 +41,6 @@ fi
 
 which rbenv &>/dev/null && eval "$(rbenv init -)"
 #which pyenv-virtualenv-init &> /dev/null && eval "$(pyenv virtualenv-init -)"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin

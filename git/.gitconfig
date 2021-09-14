@@ -1,6 +1,9 @@
 [user]
 	name = Gísli Freyr Brynjarsson
-	email = (none)
+    email = gislifb@gmail.com
+
+[includeIf "gitdir:~/code/controlant/"]
+    path = ~/code/controlant/.gitconfig_controlant
 [credential]
 	helper = cache --timeout=3600
 [alias]
@@ -17,5 +20,8 @@
 	default = current
 [core]
 	editor = /usr/bin/vim
+    abbrev = 8
 [merge]
 	tool = vimdiff
+[init]
+	defaultBranch = master

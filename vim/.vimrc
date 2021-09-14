@@ -16,6 +16,7 @@ Plug 'godlygeek/tabular'
 Plug 'morhetz/gruvbox'
 Plug 'w0rp/ale', {'for': 'python'}
 Plug 'fatih/vim-go', {'for': 'go', 'do': ':GoUpdateBinaries'}
+Plug 'hashivim/vim-terraform'
 
 " Initialize plugin system
 call plug#end()
@@ -45,6 +46,7 @@ set textwidth=0
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2
 autocmd FileType puppet setlocal tabstop=2 shiftwidth=2
+autocmd FileType tf setlocal tabstop=2 shiftwidth=2
 
 set showcmd
 set noshowmode
@@ -81,6 +83,12 @@ let mapleader= ","
 " ; same as :
 nnoremap ; :
 
+" open terminal splits
+cnoremap vt vertical terminal
+nmap <leader>vt :vertical terminal<CR>
+cnoremap ht terminal
+nmap <leader>ht :terminal<CR>
+
 "searching moving
 set ignorecase
 set smartcase
@@ -92,6 +100,11 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+" moving from terminal split
+tnoremap <C-H> <C-W><C-H>
+tnoremap <C-J> <C-W><C-J>
+tnoremap <C-K> <C-W><C-K>
+tnoremap <C-L> <C-W><C-L>
 " saner splits
 set splitbelow
 set splitright
@@ -115,6 +128,10 @@ cmap w!! w !sudo tee > /dev/null %
 " gf is built in and will "start editing the file whose name is under the cursor
 " gb is not built in and will "Go back to the file which you came from
 nnoremap gb <C-o>
+
+" insert a 'search and replace' command where the word under the cursor is
+" being replaced
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " vimux mappings
 " Prompt for a command to run
@@ -151,3 +168,8 @@ let g:gruvbox_italic=0
 " config for ALE syntax checker
 let g:ale_linters = {'python': ['flake8']}
 let g:ale_fixers = {'python': ['remove_trailing_lines', 'trim_whitespace', 'autopep8']}
+
+" config for vim-terraform
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1

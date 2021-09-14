@@ -65,3 +65,7 @@ alias bell='tput bel'
 #pretty-print json output
 alias pretty='python -mjson.tool'
 
+#office and remote shortcuts for display setup
+alias office='xrandr --output eDP1 --auto --output DP1-2 --auto --above eDP1'
+alias remote='xrandr --output eDP1 --off --output HDMI2 --auto'
+alias noremote='xrandr --output eDP1 --auto'
