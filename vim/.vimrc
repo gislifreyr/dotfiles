@@ -117,7 +117,7 @@ vnoremap <tab> %
 
 " Toggle set list and set listchars
 nmap <leader>l :set list!<CR>
-set listchars=tab:▸\ ,eol:¬
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 
 " Toggle between paste and nopaste
 nmap <leader>p :set paste!<CR>

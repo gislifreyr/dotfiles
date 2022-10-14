@@ -44,3 +44,4 @@ which rbenv &>/dev/null && eval "$(rbenv init -)"
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export TERRAGRUNT_TFPATH="$HOME/bin/terraform_0.14.10"
