@@ -45,7 +45,7 @@ map('n', 'gb', '<C-o>', { noremap=true })
 --map('n', '<leader>s', ':%s/\<<C-r><C-w>\>//g<Left><Left>' { noremap=true }
 
 -- x does not copy character into register
-map('n', 'x', '_x') 
+map('n', 'x', '"_x')
 
 -- keymaps for plugins
 
